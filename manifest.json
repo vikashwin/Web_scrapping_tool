@@ -1,0 +1,37 @@
+{
+    "name": "Advanced Web Scraper",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Scrape and download website content",
+    "action": {
+      "default_icon": "icon.png",
+      "default_title": "Open Scraper Panel"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "permissions": [
+      "sidePanel",
+      "activeTab",
+      "scripting",
+      "downloads"
+      
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "side_panel": {
+      "default_path": "sidebar.html",
+      "default_enabled": true
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [{
+      "resources": ["inject.css"],
+      "matches": ["<all_urls>"]
+    }]
+  }

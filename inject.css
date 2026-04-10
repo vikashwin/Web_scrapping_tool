@@ -1,0 +1,18 @@
+.scraper-highlight {
+    outline: 2px dashed #3498db !important;
+    background-color: rgba(52, 152, 219, 0.2) !important;
+    position: relative;
+    z-index: 9999 !important;
+}
+
+.scraper-highlight::after {
+    content: attr(data-scraper-type);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #3498db;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
